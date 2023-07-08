@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Invent - {{ title }}</title>
+		<meta charset='UTF-8'>
+		<link rel="icon" type="image/x-icon" href={{ absolute_url(asset('/static/img/ico.png')) }}>
+		{% block stylesheets %}
+			<link rel="stylesheet" href="{{ absolute_url(asset('/static/styles/style.css')) }}" />
+		{% endblock stylesheets %}
+		{% block scripts %}			
+		{% endblock scripts %}
+	</head>
+	<body>
+		<section class="page-content">
+			{% block content %}{% endblock content %}
+		</section>
+	</body>
+</html>

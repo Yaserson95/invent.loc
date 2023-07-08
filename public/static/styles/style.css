@@ -1,0 +1,127 @@
+:root{
+	--color-input:#898fff;
+	--color-input-focus:#323dff;
+	--color-input-active:#000993;
+	--color-form:#eaebff;
+}
+
+body{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+}
+
+.page-message{
+	width:100%;
+	max-width: 500px;
+	border:1px solid black;
+	margin:0px;
+	padding:10px;
+	position: fixed;
+	top: 10px;
+	left: 100px;
+	background-color: white;
+}
+.page-content{
+	width:100%;
+	height:100vh;
+	box-sizing: border-box;
+}
+
+.hello-form{
+	width:100%;
+	max-width: 700px;
+	padding: 30px;
+	-webkit-box-shadow: 0px 0px 66px 27px rgba(34, 60, 80, 0.2);
+	-moz-box-shadow: 0px 0px 66px 27px rgba(34, 60, 80, 0.2);
+	box-shadow: 0px 0px 66px 27px rgba(34, 60, 80, 0.2);
+	background-color: var(--color-form);
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+
+.hello-form > h3{
+	padding: 0px;
+	margin: 0px;
+	font: bold 18pt/1.5em Cambria;
+}
+
+.hello-form > .form{
+	margin-top: 20px;
+}
+
+.login-form{
+	width:100%;
+	height:100%;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-image: url('/static/img/login-background.png');
+	background-color: white;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.form .mb-6{
+	background-color: white;
+	margin: 10px 0px;
+	padding: 5px;
+	border-radius: 3px;
+}
+
+.form .mb-6 > label, .form .mb-6 > input{
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	border:none;	
+}
+
+.form .mb-6 > label, .form .mb-4 > label, .form .mb-6 > input{
+	font-family: Arial, helvetica;
+}
+
+.form .mb-6 > label, .form .mb-4 > label{
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+.form .mb-6 > label.required::after{
+	content: " *";
+	color: red;
+}
+
+.form .mb-6 > input{
+	padding: 3px;
+	border-bottom: 3px solid var(--color-input);
+	font-size: 12pt;
+	color:#282828;
+}
+.form .mb-6 > input:focus{
+	outline: none;
+	border-bottom-color: var(--color-input-focus);
+}
+
+.form .form-button{
+	text-align: center;
+}
+
+.form .form-button input, .form .form-button button{
+	border-radius: 50px;
+	border:none;
+	background-color: var(--color-input-focus);
+	color: white;
+	font: bold 12pt/1.5em Arial, helvetica;
+	padding: 10px 20px;
+	min-width: 150px;
+	margin-top: 20px;
+	cursor:pointer;
+}
+.form .form-button input:hover, .form .form-button button:hover{
+	background-color: var(--color-input);
+	color: var(--color-form);
+}
+
+.form .form-button input:active, .form .form-button button:active{
+	background-color: var(--color-input-active);
+}

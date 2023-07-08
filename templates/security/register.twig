@@ -1,0 +1,7 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	<div class="login-form">
+		{{ include('main/hello-form.twig', {formTitle:title, form:form}) }}
+	</div>
+{% endblock content %}

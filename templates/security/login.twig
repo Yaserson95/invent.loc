@@ -1,0 +1,32 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	<div class="login-form">
+		<div class="hello-form">
+			<h3>Авторизация</h3>
+			<div class="form">
+				<form name="login_form" action="{{ path('app_login') }}" method="post">
+					{% if error %}
+					<div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+					{% endif %}
+					<div class="mb-6">
+						<label class="block text-gray-800 required" for="login_form_login">Логин</label>
+						<input type="text" id="login_form_login" name="_username" value="{{ last_username }}" required="required">
+					</div>
+					<div class="mb-6">
+						<label class="block text-gray-800 required" for="login_form_password">Пароль</label>
+						<input type="password" id="login_form_password" name="_password" required="required">
+					</div>
+					<div class="mb-4">
+						<input type="checkbox" id="login_form_remember" name="_remember_me" required="required" checked="checked" class="mr-2" value="1">
+						<label class="block text-gray-800 required" for="login_form_remember">Запомнить</label>
+					</div>
+					<div class="form-button">
+						<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+						<button type="submit" id="login_form_auth" name="login_form[auth]">Войти</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock content %}{# empty Twig template #}
